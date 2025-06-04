@@ -14,7 +14,6 @@ spec:
           apiTokenSecretRef:
             name: cloudflare-secrets
             key: cloudflare-api-token
-            namespace: shared-config
       selector:
         dnsZones:
         - "technodumpster.com"

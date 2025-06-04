@@ -5,7 +5,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: $(ACME_EMAIL)
+    email: ezarnosky@gmail.com
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
@@ -14,7 +14,6 @@ spec:
           apiTokenSecretRef:
             name: cloudflare-secrets
             key: cloudflare-api-token
-            namespace: shared-config
       selector:
         dnsZones:
-        - $(CLOUDFLARE_ZONE)
+        - "technodumpster.com"

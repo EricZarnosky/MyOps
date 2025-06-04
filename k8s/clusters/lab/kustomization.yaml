@@ -7,3 +7,4 @@ resources:
   
   # Applications  
   - metallb-kustomization.yaml
+  - cert-manager-kustomization.yaml

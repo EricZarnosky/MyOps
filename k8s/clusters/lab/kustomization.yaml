@@ -5,6 +5,6 @@ resources:
   # Flux System
   - flux-system
   
-  # Applications  
+  # Applications
   - metallb-kustomization.yaml
   - cert-manager-kustomization.yaml

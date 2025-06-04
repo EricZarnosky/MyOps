@@ -10,24 +10,5 @@ resources:
 patchesStrategicMerge:
   - version-patch.yaml
 
-replacements:
-- source:
-    kind: Secret
-    name: cloudflare-secrets
-    namespace: shared-config
-    fieldPath: data.acme-email
-  targets:
-  - select:
-      kind: ClusterIssuer
-    fieldPaths:
-    - spec.acme.email
-- source:
-    kind: Secret
-    name: cloudflare-secrets
-    namespace: shared-config
-    fieldPath: data.cloudflare-zone
-  targets:
-  - select:
-      kind: ClusterIssuer
-    fieldPaths:
-    - spec.acme.solvers.[dns01.cloudflare].selector.dnsZones.0
+# Remove replacements - they don't work reliably with cross-namespace secrets
+# We'll use a different approach

@@ -4,6 +4,9 @@ metadata:
   name: mariadb
   namespace: database
 spec:
+  chart:
+    spec:
+      version: 20.5.7
   values:
     auth:
       username: maria_user

@@ -7,3 +7,6 @@ spec:
   chart:
     spec:
       version: 15.1.3
+  values:
+    auth:
+      username: maria_user

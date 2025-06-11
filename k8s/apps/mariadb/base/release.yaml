@@ -1,0 +1,39 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: mariadb
+  namespace: flux-system
+spec:
+  interval: 5m
+  chartRef:
+    kind: OCIRepository
+    name: mariadb
+    namespace: flux-system
+  targetNamespace: database
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    auth:
+      existingSecret: mariadb-auth
+      username: maria_app
+      database: application_db
+    primary:
+      persistence:
+        enabled: true
+        storageClass: local-path
+        size: 10Gi
+      resources:
+        requests:
+          memory: 256Mi
+          cpu: 250m
+        limits:
+          memory: 512Mi
+          cpu: 500m
+      service:
+        type: ClusterIP
+    metrics:
+      enabled: false

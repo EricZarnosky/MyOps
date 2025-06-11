@@ -6,7 +6,9 @@ metadata:
 spec:
   chart:
     spec:
+      chart: mariadb
       version: 20.5.7
-  values:
-    auth:
-      username: maria_user
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: database

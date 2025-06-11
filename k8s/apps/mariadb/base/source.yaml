@@ -4,6 +4,6 @@ metadata:
   name: bitnami
   namespace: database
 spec:
-  type: helm
+  type: default
   interval: 1h
   url: https://charts.bitnami.com/bitnami

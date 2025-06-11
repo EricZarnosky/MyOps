@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - flux-system
   - mariadb-kustomization.yaml
+  - postgresql-kustomization.yaml

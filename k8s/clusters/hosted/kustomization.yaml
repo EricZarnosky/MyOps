@@ -4,3 +4,4 @@ resources:
   - flux-system
   - mariadb-kustomization.yaml
   - postgresql-kustomization.yaml
+  - cert-manager-nginx-kustomization.yaml

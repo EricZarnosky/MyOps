@@ -5,3 +5,4 @@ resources:
   - mariadb-kustomization.yaml
   - postgresql-kustomization.yaml
   - cert-manager-nginx-kustomization.yaml
+  - cert-manager-only-kustomization.yaml

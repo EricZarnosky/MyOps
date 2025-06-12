@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod-technodumpster-com
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: ezarnosky@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt-prod-technodumpster-com
+    solvers:
+    - dns01:
+        cloudflare:
+          apiTokenSecretRef:
+            name: cloudflare-api-token-technodumpster-com
+            key: api-token
+      selector:
+        dnsZones:
+        - "technodumpster.com"

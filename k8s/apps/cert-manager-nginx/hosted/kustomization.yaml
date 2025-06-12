@@ -3,9 +3,18 @@ kind: Kustomization
 
 resources:
   - ../base
-  - clusterissuer-prod.yaml
-  - clusterissuer-staging.yaml
-  - sealed-secret.yaml
+  # Domain-specific resources for idreaminyaml.com
+  - clusterissuer-prod-idreaminyaml-com.yaml
+  - clusterissuer-staging-idreaminyaml-com.yaml
+  - sealed-secret-idreaminyaml-com.yaml
+  # Domain-specific resources for technodumpster.com
+  - clusterissuer-prod-technodumpster-com.yaml
+  - clusterissuer-staging-technodumpster-com.yaml
+  - sealed-secret-technodumpster-com.yaml
+  # Domain-specific resources for Zarnosky.online
+  - clusterissuer-prod-Zarnosky-online.yaml
+  - clusterissuer-staging-Zarnosky-online.yaml
+  - sealed-secret-Zarnosky-online.yaml
 
 patchesStrategicMerge:
   - version-patch.yaml

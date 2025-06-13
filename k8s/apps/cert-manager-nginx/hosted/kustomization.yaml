@@ -11,10 +11,14 @@ resources:
   - clusterissuer-prod-technodumpster-com.yaml
   - clusterissuer-staging-technodumpster-com.yaml
   - sealed-secret-technodumpster-com.yaml
-  # Domain-specific resources for Zarnosky.online
-  - clusterissuer-prod-Zarnosky-online.yaml
-  - clusterissuer-staging-Zarnosky-online.yaml
-  - sealed-secret-Zarnosky-online.yaml
+  # Domain-specific resources for zarnosky.online
+  - clusterissuer-prod-zarnosky-online.yaml
+  - clusterissuer-staging-zarnosky-online.yaml
+  - sealed-secret-zarnosky-online.yaml
+  # Domain-specific resources for mydevopsguys.com
+  - clusterissuer-prod-mydevopsguys-com.yaml
+  - clusterissuer-staging-mydevopsguys-com.yaml
+  - sealed-secret-mydevopsguys-com.yaml
 
 patchesStrategicMerge:
   - version-patch.yaml

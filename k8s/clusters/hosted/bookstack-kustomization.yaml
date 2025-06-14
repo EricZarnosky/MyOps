@@ -17,5 +17,6 @@ spec:
       kind: Deployment
       name: bookstack
       namespace: bookstack
-  dependsOn:
-    - name: mariadb
+  # Remove dependency for now since the MariaDB is already running
+  # dependsOn:
+  #   - name: mariadb
